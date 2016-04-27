@@ -121,7 +121,7 @@ def play(headless=False, ai=None):
 			if p.x + Pipe.PIECE_WIDTH/2 < bird.x and not p.counted:
 				p.counted = True
 				score += 1
-                                print score
+                                #print score
 
 			p.update()
 			if not headless:
