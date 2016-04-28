@@ -128,21 +128,21 @@ def updateweights(n1, n2):
 	b= random.random()
 	c= random.random()
 	if b < mutationrate:
-                print "Hi"
-		#Randomly picking any one index of the list to be mutated
-		index = random.randint(0, len(child1) - 1)
-		#perturbing the value slightly by adding a small component proportional to the original value of the weight
-		#for that index (it is being multiplied by a random number generated from a triangular distribution)
-		#This step is similar to mutation in genetics, where the genome gets randomly perturbed by external mutagens.
-		child1[index] += random.triangular(-1, 1) * child1[index]
+            print "Hi"
+            #Randomly picking any one index of the list to be mutated
+	    index = random.randint(0, len(child1) - 1)
+            #perturbing the value slightly by adding a small component proportional to the original value of the weight
+	    #for that index (it is being multiplied by a random number generated from a triangular distribution)
+	    #This step is similar to mutation in genetics, where the genome gets randomly perturbed by external mutagens.
+	    child1[index] += random.triangular(-1, 1) * child1[index]
 	if c < mutationrate:
-                print "Hello"
-		index = random.randint(0, len(child2) - 1)
-		child2[index] += random.triangular(-1, 1) * child2[index]
+            print "Hello"
+	    index = random.randint(0, len(child2) - 1)
+	    child2[index] += random.triangular(-1, 1) * child2[index]
         #After the crossing over and mutation (if any), the list of weights is converted back to weights for the NeuralNets.
 	n1.listtonet(child1)
 	n2.listtonet(child2)
-	return (n1, n2)
+    return (n1, n2)
 
 #Function which gives a NeuralNet from the genome that has a higher performance associated with it
 def survivaloffittest(genome):
