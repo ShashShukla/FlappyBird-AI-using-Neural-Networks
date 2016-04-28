@@ -46,6 +46,7 @@ def mutate(gene):
 	if random.random() < MUT_RATE:
 		index = random.randint(0, len(gene) - 1)
 		gene[index] += random.triangular(-1, 1) * gene[index]
+		return gene
 
 def select(pop):
 	first = pop[random.randint(0, len(pop) - 1)]
