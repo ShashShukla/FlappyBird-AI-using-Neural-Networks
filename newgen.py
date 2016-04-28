@@ -1,6 +1,6 @@
 import heapq
 import copy
-from game import play
+from flappygame import play
 import numpy as np
 import math
 import random
