@@ -78,7 +78,7 @@ class Pipe(game.sprite.Sprite):
 		total_pipe_body_pieces = int((SCREEN_HEIGHT - 3 * BIRD_HEIGHT - 3 * PIPE_PIECE_HEIGHT) / PIPE_PIECE_HEIGHT)
 		
 		# Set the vertical length of the bottom piece of the pipe pair
-		self.bottom_pieces = randint(1, total_pipe_body_pieces)
+		self.bottom_pieces = randint(1, total_pipe_body_pieces-1)
 
 		# Set the vertical length of the to piece of the pipe pair
 		self.top_pieces = total_pipe_body_pieces - self.bottom_pieces
