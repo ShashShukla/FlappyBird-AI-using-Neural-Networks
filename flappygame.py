@@ -2,7 +2,6 @@ import pygame as game
 from random import randint
 from pygame.locals import *
 from collections import deque
-from ai import Net
 
 
 # Bird image loader
